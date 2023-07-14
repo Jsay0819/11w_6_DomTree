@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>get 메서드</title>
+    <style></style>
+  </head>
+  <body>
+    <h1 id="title">title</h1>
+    <p class="text">비온다</p>
+    <p class="text">비와요</p>
+    <p>비온다구요</p>
+    <script>
+      var getI = document.getElementById("title");
+      console.log(getI);
+
+      var getC = document.getElementsByClassName("text");
+      console.log(getC);
+
+      // 괄호 안에 <P> 있는게 태그네임
+      var getN = document.getElementsByTagName("p");
+      console.log(getN);
+    </script>
+  </body>
+</html>

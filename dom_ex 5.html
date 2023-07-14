@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클래스 가져오기</title>
+    <style>
+      .red {
+        background-color: skyblue;
+        color: #fff;
+      }
+      .fs {
+        font-size: 2rem;
+      }
+      .btn {
+        border: 3px solid #ccc;
+      }
+      .repeat {
+        background-color: #999;
+        color: #fff;
+      }
+      .fw {
+        font-weight: bold;
+        padding: 30px 150px;
+      }
+      .click {
+        color: rgb(233, 127, 41);
+      }
+    </style>
+  </head>
+  <body>
+    <p class="text">클래스 추가하기</p>
+    <span class="btn">클래스 삭제하기</span>
+    <div class="repeat">클래스 추가,삭제 반복하기</div>
+    <div class="title">contains</div>
+    <script>
+      // 클래스 추가하기
+      var pEl = document.querySelector(".text");
+      pEl.classList.add("red", "fs");
+      pEl.classList.add("fw");
+
+      // 클래스 삭제하기
+      var sp = document.querySelector(".btn");
+      sp.classList.remove("btn");
+
+      // 클래스 추가, 삭제 반복하기
+      var rp = document.querySelector(".repeat");
+      rp.onclick = function () {
+        rp.classList.toggle("repeat");
+      };
+
+      // contains
+      var title = document.querySelector(".title");
+      title.onclick = function () {
+        if (title.classList.contains("click")) {
+          title.classList.remove("click");
+        } else {
+          title.classList.add("click");
+        }
+      };
+    </script>
+  </body>
+</html>

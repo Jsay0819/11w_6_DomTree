@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM event 객체</title>
+    <style>
+      #container {
+        width: 200px;
+        margin: 30px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <img src="images/cup_1.png" alt="cup" id="cup" />
+    </div>
+
+    <script>
+      var cup = document.getElementById("cup");
+      // cup.onclick = function () {
+      //   alert("이미지를 클릭했습니다.");
+      // };
+
+      // 이미지 파일 바꾸기
+      // cup.onclick = function () {
+      //   cup.src = "images/cup_2.png";
+      // };
+
+      cup.onclick = function (event) {
+        // 이벤트 유형, 클릭한 위치 보기
+        // alert(
+        //   `이벤트 유형 : ${event.type} , 이벤트 발생 위치: X값 ${event.pageX} , Y값 ${event.pageY} `
+        // );
+
+        // 클릭한 이미지 파일 보기
+        alert(`클릭한 이미지 파일 : ${this.src}`);
+      };
+    </script>
+  </body>
+</html>

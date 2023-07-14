@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메서드 가져오기</title>
+    <style>
+      .green {
+        color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="http://www.naver.com">네이버</a>
+
+    <script>
+      // <a href="http://www.naver.com">네이버</a> 가 보임
+      var aEl = document.querySelector("a");
+      // console.log(aEl);
+
+      // http://www.naver.com 가 보임
+      var href = aEl.getAttribute("href");
+      // console.log(href);
+
+      // getAttribute로 네이버 주소를 가져와서
+      // 구글 주소로 setAttibute (세팅) 해줌
+      aEl.setAttribute("href", "http://www.google.com");
+      // console.log(aEl);
+
+      // innerText 구글로 바꿔줌
+      aEl.innerText = "구글";
+
+      // 타겟 _ 블랜크로 열어줌
+      aEl.setAttribute("target", "_blank");
+
+      // style에 지정해둔 글자색으로 바꿔줌
+      aEl.setAttribute("class", "green");
+
+      // 속성값 변경해주기
+      aEl.setAttribute("data-d", "naver");
+      // data (속성) -d (값)
+      // console.log(aEl.dataset);
+
+      aEl.removeAttribute("class");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>컨텐츠 가져오기</title>
+    <style></style>
+  </head>
+  <body>
+    <p id="title">Hi, <span style="display: none">Javascript!</span></p>
+
+    <script>
+      // textContent , innerText , innerHTML 차이점
+      document.getElementById("title").textContent;
+      document.getElementById("title").innerText;
+      document.getElementById("title").innerHTML;
+
+      // 콘솔에서 보면
+      // Hi, javascript 다 보임
+      console.log(document.getElementById("title").textContent);
+
+      // Hi만 보임
+      console.log(document.getElementById("title").innerText);
+
+      // Hi, <span style="display: none">Javascript!</span> 가 보임
+      console.log(document.getElementById("title").innerHTML);
+    </script>
+  </body>
+</html>

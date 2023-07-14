@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스타일 수정하기</title>
+  </head>
+  <body>
+    <p id="text">비와요 ~~~◎.◎~~~</p>
+
+    <script>
+      var text = document.getElementById("text");
+      // querySelector 하면 ("#text")라고 #을 적어줘야 되지만 getElementId 는 이미 아이디를 불러온다고 했으니 # 안적어줘도됨
+      text.style.color = "skyblue";
+      text.style.fontWeight = "bold";
+      text.style.fontSize = "50px";
+    </script>
+  </body>
+</html>
